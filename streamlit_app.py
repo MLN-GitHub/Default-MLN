@@ -15,9 +15,20 @@ def main_page():
     # Display the selected option
     st.write(f"You selected: **{selected_option}**")
 
-    if st.button("Upload Image"):
+    uploaded_file = st.file_uploader("Choose a file")
+
+    if uploaded_file is not None:
+    # You can perform operations with the uploaded file here
+        st.write("File uploaded successfully!")
+        st.write(f"File name: {uploaded_file.name}")
+    # Example: Read the content of a text file
+    # file_content = uploaded_file.read().decode("utf-8")
+    # st.write("File content:")
+    # st.code(file_content)
+
+    #if st.button("Upload Image"):
         # do nothing
-        x = 1
+    #    x = 1
     
     if st.button("Capture New Image"):
         # do nothing
